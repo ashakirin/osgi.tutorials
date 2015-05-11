@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://karaf.apache.org/xmlns/features/v1.0.0 http://karaf.apache.org/xmlns/features/v1.0.0"
+	name="ccp">
+	
+    <feature name="first-service" version="${pom.version}">
+        <feature>camel-blueprint</feature>
+        <feature>camel-core</feature>
+        <feature>activemq</feature>
+        <bundle>mvn:${project.groupId}/jms.connector/${project.version}</bundle>
+        <bundle>mvn:${project.groupId}/first.service/${project.version}</bundle>
+    </feature>
+
+</features>
